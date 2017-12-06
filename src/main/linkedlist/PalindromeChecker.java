@@ -3,12 +3,12 @@ package linkedlist;
 //2.6
 public class PalindromeChecker {
 
-    public boolean isPalindrome(Node head) {
+    public static boolean isPalindrome(Node head) {
         Node reversed = reverseAndClone(head);
         return isEqual(head, reversed);
     }
 
-    public Node reverseAndClone(Node node) {
+    public static Node reverseAndClone(Node node) {
         Node head = null;
         while (node != null) {
             Node n = new Node(node.data);
@@ -19,7 +19,7 @@ public class PalindromeChecker {
         return head;
     }
 
-    public boolean isEqual(Node one, Node two) {
+    public static boolean isEqual(Node one, Node two) {
         while (one != null && two != null) {
             if (one.data != two.data) {
                 return false;
@@ -31,14 +31,13 @@ public class PalindromeChecker {
     }
 
     public static void main(String[] args) {
-        PalindromeChecker pc = new PalindromeChecker();
         Node node = new Node(1);
         node.appendToTail(2);
         node.appendToTail(1);
-        System.out.println(pc.isPalindrome(node));
+        System.out.println(isPalindrome(node));
         Node node2 = new Node(1);
         node2.appendToTail(2);
         node2.appendToTail(3);
-        System.out.println(pc.isPalindrome(node2));
+        System.out.println(isPalindrome(node2));
     }
 }

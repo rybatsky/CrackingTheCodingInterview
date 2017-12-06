@@ -3,18 +3,18 @@ package array;
 //1.5
 public class ModificationChecker {
 
-    public boolean isOneModificationAway(String s1, String s2) {
+    public static boolean isOneModificationAway(String s1, String s2) {
         int length1 = s1.length();
         int length2 = s2.length();
 
-        if(Math.abs(length2 - length1) > 1) {
+        if (Math.abs(length2 - length1) > 1) {
             return false;
         }
 
         int max;
         int min;
         String biggerStr;
-        String  smallerStr;
+        String smallerStr;
         if (length1 > length2) {
             max = length1;
             min = length2;
@@ -50,16 +50,15 @@ public class ModificationChecker {
     }
 
     public static void main(String[] args) {
-        ModificationChecker om = new ModificationChecker();
-        System.out.println(om.isOneModificationAway("a", ""));
-        System.out.println(om.isOneModificationAway("", "b"));
-        System.out.println(om.isOneModificationAway("ab", ""));
-        System.out.println(om.isOneModificationAway("ab", "b"));
-        System.out.println(om.isOneModificationAway("ba", "b"));
-        System.out.println(om.isOneModificationAway("ba", "bc"));
-        System.out.println(om.isOneModificationAway("bab", "bc"));
-        System.out.println(om.isOneModificationAway("ab", "ac"));
-        System.out.println(om.isOneModificationAway("abc", "adc"));
-        System.out.println(om.isOneModificationAway("abc", "acd"));
+        System.out.println(isOneModificationAway("a", ""));
+        System.out.println(isOneModificationAway("", "b"));
+        System.out.println(isOneModificationAway("ab", ""));
+        System.out.println(isOneModificationAway("ab", "b"));
+        System.out.println(isOneModificationAway("ba", "b"));
+        System.out.println(isOneModificationAway("ba", "bc"));
+        System.out.println(isOneModificationAway("bab", "bc"));
+        System.out.println(isOneModificationAway("ab", "ac"));
+        System.out.println(isOneModificationAway("abc", "adc"));
+        System.out.println(isOneModificationAway("abc", "acd"));
     }
 }

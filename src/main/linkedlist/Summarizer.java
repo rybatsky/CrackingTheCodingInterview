@@ -3,7 +3,7 @@ package linkedlist;
 //2.5
 public class Summarizer {
 
-    public Node reverseSum(Node summand1, Node summand2, int carry) {
+    public static Node reverseSum(Node summand1, Node summand2, int carry) {
         if (summand1 == null && summand2 == null && carry == 0) {
             return null;
         }
@@ -40,19 +40,18 @@ public class Summarizer {
         return result;
     }
 
-    public Node reverseSum(Node summand1, Node summand2) {
+    public static Node reverseSum(Node summand1, Node summand2) {
         return reverseSum(summand1, summand2, 0);
     }
 
     public static void main(String[] args) {
-        Summarizer s = new Summarizer();
         Node summand1 = new Node(7);
         summand1.appendToTail(1);
         summand1.appendToTail(6);
         Node summand2 = new Node(5);
         summand2.appendToTail(9);
         summand2.appendToTail(2);
-        Node node = s.reverseSum(summand1, summand2);
+        Node node = reverseSum(summand1, summand2);
         System.out.println(node);
     }
 }

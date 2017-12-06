@@ -3,7 +3,7 @@ package linkedlist;
 //2.1
 public class DuplicateRemover {
 
-    public void remove(Node node) {
+    public static void remove(Node node) {
         while (node != null) {
             Node runner = node;
             while (runner.next != null) {
@@ -18,7 +18,6 @@ public class DuplicateRemover {
     }
 
     public static void main(String[] args) {
-        DuplicateRemover dr = new DuplicateRemover();
         Node node = new Node();
         node.appendToTail(1);
         node.appendToTail(2);
@@ -26,7 +25,7 @@ public class DuplicateRemover {
         node.appendToTail(1);
         node.appendToTail(10);
         node.appendToTail(111);
-        dr.remove(node);
+        remove(node);
         System.out.println(node);
     }
 }

@@ -3,7 +3,7 @@ package array;
 //1.2
 public class PermutationChecker {
 
-    public boolean isPermutation(String s1, String s2) {
+    public static boolean isPermutation(String s1, String s2) {
         int strLength1 = s1.length();
         int strLength2 = s2.length();
         if (strLength1 != strLength2) {
@@ -27,11 +27,10 @@ public class PermutationChecker {
     }
 
     public static void main(String[] args) {
-        PermutationChecker ps = new PermutationChecker();
-        System.out.println(ps.isPermutation("sasasasas", ""));
-        System.out.println(ps.isPermutation("", ""));
-        System.out.println(ps.isPermutation("", "nan"));
-        System.out.println(ps.isPermutation("sas", "nan"));
-        System.out.println(ps.isPermutation("sas", "ass"));
+        System.out.println(isPermutation("sasasasas", ""));
+        System.out.println(isPermutation("", ""));
+        System.out.println(isPermutation("", "nan"));
+        System.out.println(isPermutation("sas", "nan"));
+        System.out.println(isPermutation("sas", "ass"));
     }
 }

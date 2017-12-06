@@ -23,7 +23,7 @@ public class Node {
     public Node deleteNode(Node head, int d) {
         Node n = head;
 
-        if(n.data == d) {
+        if (n.data == d) {
             return head.next;
         }
 

@@ -3,7 +3,7 @@ package array;
 //1.6
 public class Compressor {
 
-    public String compress(String str) {
+    public static String compress(String str) {
         StringBuilder compressed = new StringBuilder(str.length());
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
@@ -23,11 +23,10 @@ public class Compressor {
     }
 
     public static void main(String[] args) {
-        Compressor cs = new Compressor();
-        System.out.println(cs.compress(""));
-        System.out.println(cs.compress("  "));
-        System.out.println(cs.compress("ababababab"));
-        System.out.println(cs.compress("aaaaaaaaabababab"));
-        System.out.println(cs.compress("aaaaaaaaabbbbbbbbbb"));
+        System.out.println(compress(""));
+        System.out.println(compress("  "));
+        System.out.println(compress("ababababab"));
+        System.out.println(compress("aaaaaaaaabababab"));
+        System.out.println(compress("aaaaaaaaabbbbbbbbbb"));
     }
 }
