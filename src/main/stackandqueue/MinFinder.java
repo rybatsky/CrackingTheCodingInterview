@@ -2,7 +2,7 @@ package stackandqueue;
 
 import java.util.Stack;
 
-//3.2
+//3.2 (50min)
 public class MinFinder extends Stack<MinNode> {
 
     public void push(int item) {

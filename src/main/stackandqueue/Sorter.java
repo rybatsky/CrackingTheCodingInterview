@@ -2,7 +2,7 @@ package stackandqueue;
 
 import java.util.Stack;
 
-//3.5
+//3.5 (60min)
 public class Sorter {
 
     public static Stack<Integer> sort(Stack<Integer> stack) {
