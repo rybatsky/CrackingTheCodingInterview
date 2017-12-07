@@ -1,6 +1,6 @@
-package array;
+package arrayandstring;
 
-//1.2
+//1.2 (50min)
 public class PermutationChecker {
 
     public static boolean isPermutation(String s1, String s2) {

@@ -1,6 +1,6 @@
-package array;
+package arrayandstring;
 
-//1.5
+//1.5 (60min)
 public class ModificationChecker {
 
     public static boolean isOneModificationAway(String s1, String s2) {

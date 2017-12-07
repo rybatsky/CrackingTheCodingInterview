@@ -1,6 +1,6 @@
-package array;
+package arrayandstring;
 
-//1.1
+//1.1 (40min)
 public class UniqueSymbolsChecker {
 
     public static boolean isUnique(String str) {

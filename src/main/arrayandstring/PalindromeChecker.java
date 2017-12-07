@@ -1,6 +1,6 @@
-package array;
+package arrayandstring;
 
-//1.4
+//1.4 (30min)
 public class PalindromeChecker {
 
     public static boolean isPermutatedPalindrome(String str) {

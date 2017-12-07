@@ -1,6 +1,6 @@
-package array;
+package arrayandstring;
 
-//1.6
+//1.6 (40min)
 public class Compressor {
 
     public static String compress(String str) {
