@@ -1,6 +1,6 @@
 package linkedlist;
 
-//2.1
+//2.1 (50min)
 public class DuplicateRemover {
 
     public static void remove(Node node) {

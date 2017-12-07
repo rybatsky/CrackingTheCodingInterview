@@ -1,6 +1,6 @@
 package linkedlist;
 
-//2.4
+//2.4 (60min)
 public class Divider {
 
     public static Node divide(Node node, int pivot) {

@@ -1,6 +1,6 @@
 package linkedlist;
 
-//2.6
+//2.6 (70min)
 public class PalindromeChecker {
 
     public static boolean isPalindrome(Node head) {

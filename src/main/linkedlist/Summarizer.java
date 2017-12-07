@@ -1,6 +1,6 @@
 package linkedlist;
 
-//2.5
+//2.5 (70min)
 public class Summarizer {
 
     public static Node reverseSum(Node summand1, Node summand2, int carry) {
