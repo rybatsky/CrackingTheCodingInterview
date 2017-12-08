@@ -14,12 +14,7 @@ public class Permutation {
             int itt = it.next();
             while (iter.hasNext()) {
                 int iterr = iter.next();
-                if ((itt != iterr) && ((itt % iterr) == 0)) {
-                    Pair pair = new Pair(itt, iterr);
-                    if (!pairs.contains(pair)) {
-                        pairs.add(pair);
-                    }
-                } else if ((itt != iterr) && (iterr % itt == 0)) {
+                if ((itt != iterr) && (iterr % itt == 0)) {
                     Pair pair = new Pair(iterr, itt);
                     if (!pairs.contains(pair)) {
                         pairs.add(pair);
@@ -60,6 +55,6 @@ public class Permutation {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        pairing(arr);
+        System.out.println(pairing(arr));
     }
 }
