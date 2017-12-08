@@ -9,12 +9,15 @@ public class Fibonacci {
     public static int max(int[] array) {
         int maximum = array[0];
         for (int i = 0; i < array.length; i++) {
-            if (maximum < array[i]) maximum = array[i];
+            if (maximum < array[i]) {
+                maximum = array[i];
+            }
         }
         return maximum;
     }
 
-    public static List<Integer> fib(int max, List<Integer> fib) {
+    public static List<Integer> fib(int max) {
+        List<Integer> fib = new ArrayList<>();
         if (max == 0) {
             fib.add(0);
             return fib;
@@ -34,9 +37,7 @@ public class Fibonacci {
     }
 
     public static boolean isFib(int[] array) {
-        int max = max(array);
-        List<Integer> list = new ArrayList<>();
-        List<Integer> fib = fib(max, list);
+        List<Integer> fib = fib(max(array));
         for (int i = 0; i < array.length; i++) {
             if (!fib.contains(array[i])) {
                 return false;
