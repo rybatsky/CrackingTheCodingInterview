@@ -16,14 +16,14 @@ public class TreeBuilder {
             int i = 1;
             while (!done) {
                 TreeNode r = queue.element();
-                if (r.left == null) {
-                    r.left = new TreeNode(array[i]);
+                if (r.getLeft() == null) {
+                    r.setLeft(new TreeNode(array[i]));
                     i++;
-                    queue.add(r.left);
-                } else if (r.right == null) {
-                    r.right = new TreeNode(array[i]);
+                    queue.add(r.getLeft());
+                } else if (r.getRight() == null) {
+                    r.setRight(new TreeNode(array[i]));
                     i++;
-                    queue.add(r.right);
+                    queue.add(r.getRight());
                 } else {
                     queue.remove();
                 }

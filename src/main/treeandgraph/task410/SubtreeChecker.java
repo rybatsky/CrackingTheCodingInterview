@@ -22,9 +22,9 @@ public class SubtreeChecker {
             sb.append("X");
             return;
         }
-        sb.append(node.data);
-        getOrderString(node.left, sb);
-        getOrderString(node.right, sb);
+        sb.append(node.getData());
+        getOrderString(node.getLeft(), sb);
+        getOrderString(node.getRight(), sb);
     }
 
     public static void main(String[] args) {

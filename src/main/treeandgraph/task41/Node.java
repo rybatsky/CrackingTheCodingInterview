@@ -1,10 +1,10 @@
 package treeandgraph.task41;
 
 public class Node {
-    public Node adjacent[];
-    public int adjacentCount;
-    public int vertex;
-    public RouteChecker.State state;
+    private Node adjacent[];
+    private int adjacentCount;
+    private int vertex;
+    private RouteChecker.State state;
 
     public Node(int vertex, int adjacentLength) {
         this.vertex = vertex;
@@ -23,5 +23,13 @@ public class Node {
 
     public Node[] getAdjacent() {
         return adjacent;
+    }
+
+    public RouteChecker.State getState() {
+        return state;
+    }
+
+    public void setState(RouteChecker.State state) {
+        this.state = state;
     }
 }

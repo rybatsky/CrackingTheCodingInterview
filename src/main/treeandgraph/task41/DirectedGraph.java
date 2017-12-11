@@ -1,8 +1,8 @@
 package treeandgraph.task41;
 
 public class DirectedGraph {
-    public Node[] nodes;
-    public int count;
+    private Node[] nodes;
+    private int count;
 
     public DirectedGraph(int nodesNumber) {
         nodes = new Node[nodesNumber];

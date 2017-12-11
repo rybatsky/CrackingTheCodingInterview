@@ -13,9 +13,9 @@ public class RouteChecker {
 
         LinkedList<Node> queue = new LinkedList<>();
         for (Node node : graph.getNodes()) {
-            node.state = State.UNVISITED;
+            node.setState(State.UNVISITED);
         }
-        start.state = State.CURRENT;
+        start.setState(State.CURRENT);
         queue.add(start);
 
         Node node;
@@ -23,17 +23,17 @@ public class RouteChecker {
             node = queue.removeFirst();
             if (node != null) {
                 for (Node adj : node.getAdjacent()) {
-                    if (adj.state == State.UNVISITED) {
+                    if (adj.getState() == State.UNVISITED) {
                         if (adj == end) {
                             return true;
                         }
                     } else {
-                        adj.state = State.CURRENT;
+                        adj.setState(State.CURRENT);
                         queue.add(adj);
                     }
                 }
             }
-            node.state = State.VISITED;
+            node.setState(State.VISITED);
         }
         return false;
     }

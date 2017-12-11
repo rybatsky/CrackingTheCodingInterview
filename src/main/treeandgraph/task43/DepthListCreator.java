@@ -17,8 +17,8 @@ public class DepthListCreator {
             list = lists.get(level);
         }
         list.add(root);
-        createLevelLinkedList(root.left, lists, level + 1);
-        createLevelLinkedList(root.right, lists, level + 1);
+        createLevelLinkedList(root.getLeft(), lists, level + 1);
+        createLevelLinkedList(root.getRight(), lists, level + 1);
     }
 
     public static List<List<TreeNode>> createLevelLinkedList(TreeNode root) {
@@ -36,7 +36,7 @@ public class DepthListCreator {
             Iterator<TreeNode> it = entry.listIterator();
             System.out.print("Linked list at depth " + depth + ":");
             while (it.hasNext()) {
-                System.out.print(" " + (it.next()).data);
+                System.out.print(" " + (it.next()).getData());
             }
             System.out.println();
             depth++;
