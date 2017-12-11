@@ -10,15 +10,15 @@ public class Divider {
         Node afterEnd = null;
 
         while (node != null) {
-            Node next = node.next;
-            node.next = null;
+            Node next = node.getNext();
+            node.setNext(null);
 
-            if (node.data < pivot) {
+            if (node.getData() < pivot) {
                 if (beforeStart == null) {
                     beforeStart = node;
                     beforeEnd = beforeStart;
                 } else {
-                    beforeEnd.next = node;
+                    beforeEnd.setNext(node);
                     beforeEnd = node;
                 }
             } else {
@@ -26,7 +26,7 @@ public class Divider {
                     afterStart = node;
                     afterEnd = afterStart;
                 } else {
-                    afterEnd.next = node;
+                    afterEnd.setNext(node);
                     afterEnd = node;
                 }
             }
@@ -38,7 +38,7 @@ public class Divider {
             return afterStart;
         }
 
-        beforeEnd.next = afterStart;
+        beforeEnd.setNext(afterStart);
         return beforeStart;
     }
 

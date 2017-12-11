@@ -6,20 +6,19 @@ public class DuplicateRemover {
     public static void remove(Node node) {
         while (node != null) {
             Node runner = node;
-            while (runner.next != null) {
-                if (runner.next.data == node.data) {
-                    runner.next = runner.next.next;
+            while (runner.getNext() != null) {
+                if (runner.getNext().getData() == node.getData()) {
+                    runner.setNext(runner.getNext().getNext());
                 } else {
-                    runner = runner.next;
+                    runner = runner.getNext();
                 }
             }
-            node = node.next;
+            node = node.getNext();
         }
     }
 
     public static void main(String[] args) {
-        Node node = new Node();
-        node.appendToTail(1);
+        Node node = new Node(1);
         node.appendToTail(2);
         node.appendToTail(1);
         node.appendToTail(1);

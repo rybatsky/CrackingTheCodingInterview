@@ -1,8 +1,8 @@
 package linkedlist;
 
 public class Node {
-    Node next = null;
-    int data;
+    private Node next;
+    private int data;
 
     public Node() {
     }
@@ -14,39 +14,30 @@ public class Node {
     public void appendToTail(int d) {
         Node end = new Node(d);
         Node n = this;
-        while (n.next != null) {
-            n = n.next;
+        while (n.getNext() != null) {
+            n = n.getNext();
         }
-        n.next = end;
+        n.setNext(end);
     }
 
-    public Node deleteNode(Node head, int d) {
-        Node n = head;
-
-        if (n.data == d) {
-            return head.next;
-        }
-
-        while (n.next != null) {
-            if (n.next.data == d) {
-                n.next = n.next.next;
-                return head;
-            }
-            n = n.next;
-        }
-
-        return head;
+    public Node getNext() {
+        return next;
     }
 
     public void setNext(Node next) {
         this.next = next;
     }
 
+    public int getData() {
+        return data;
+    }
+
+    public void setData(int data) {
+        this.data = data;
+    }
+
     @Override
     public String toString() {
-        return "Node{" +
-                "next=" + next +
-                ", data=" + data +
-                '}';
+        return data + " " + next;
     }
 }

@@ -10,23 +10,23 @@ public class Summarizer {
 
         int sum = carry;
         if (summand1 != null) {
-            sum += summand1.data;
+            sum += summand1.getData();
         }
         if (summand2 != null) {
-            sum += summand2.data;
+            sum += summand2.getData();
         }
 
         Node result = new Node();
-        result.data = sum % 10;
+        result.setData(sum % 10);
 
         Node node1 = null;
         Node node2 = null;
         if (summand1 != null || summand2 != null) {
             if (summand1 != null) {
-                node1 = summand1.next;
+                node1 = summand1.getNext();
             }
             if (summand2 != null) {
-                node2 = summand2.next;
+                node2 = summand2.getNext();
             }
             if (sum >= 10) {
                 carry = 1;
