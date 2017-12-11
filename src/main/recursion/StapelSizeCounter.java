@@ -25,7 +25,7 @@ public class StapelSizeCounter {
                 maxHeight = Math.max(height, maxHeight);
             }
         }
-        maxHeight += bottom.height;
+        maxHeight += bottom.getHeight();
         return maxHeight;
     }
 

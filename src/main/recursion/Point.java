@@ -1,8 +1,8 @@
 package recursion;
 
 public class Point {
-    public int row;
-    public int column;
+    private int row;
+    private int column;
 
     public Point(int row, int column) {
         this.row = row;

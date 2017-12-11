@@ -3,9 +3,9 @@ package recursion;
 import java.util.Comparator;
 
 public class Box {
-    public int width;
-    public int height;
-    public int depth;
+    private int width;
+    private int height;
+    private int depth;
 
     public Box(int w, int h, int d) {
         width = w;
@@ -22,6 +22,10 @@ public class Box {
 
     public String toString() {
         return "Box(" + width + ", " + height + ", " + depth + ")";
+    }
+
+    public int getHeight() {
+        return height;
     }
 
     static class BoxComparator implements Comparator<Box> {
