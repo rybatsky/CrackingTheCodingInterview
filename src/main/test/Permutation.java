@@ -1,23 +1,23 @@
 package test;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Iterator;
 
-//Task 2. O(n^2)
+//Task 2. O(n)
 public class Permutation {
 
-    public static List<Pair> pairing(int[] array) {
-        List<Pair> pairs = new ArrayList<>();
-        List<Integer> permuted = permute(array);
+    public static HashSet<Pair> pairing(int[] array) {
+        HashSet<Pair> pairs = new HashSet<>();
+        HashSet<Integer> permuted = permute(array);
         Iterator<Integer> it = permuted.iterator();
-        Iterator<Integer> iter = permuted.iterator();
         while (it.hasNext()) {
             int itt = it.next();
-            while (iter.hasNext()) {
-                int iterr = iter.next();
-                if ((itt != iterr) && (iterr % itt == 0)) {
-                    Pair pair = new Pair(iterr, itt);
-                    if (!pairs.contains(pair)) {
-                        pairs.add(pair);
+            int iterr;
+            for (int n = 2; n < 10; n++) {
+                if (itt % n == 0) {
+                    iterr = itt / n;
+                    if (permuted.contains(iterr)) {
+                        pairs.add(new Pair(itt, iterr));
                     }
                 }
             }
@@ -25,13 +25,13 @@ public class Permutation {
         return pairs;
     }
 
-    public static List<Integer> permute(int[] arr) {
-        List<Integer> perms = new ArrayList<>();
+    public static HashSet<Integer> permute(int[] arr) {
+        HashSet<Integer> perms = new HashSet<>();
         permute(arr, 0, perms);
         return perms;
     }
 
-    private static void permute(int[] arr, int index, List<Integer> perms) {
+    private static void permute(int[] arr, int index, HashSet<Integer> perms) {
         StringBuilder perm = new StringBuilder();
         for (int i = 0; i < arr.length - 1; i++) {
             perm.append(arr[i]);
